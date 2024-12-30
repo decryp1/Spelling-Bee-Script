@@ -1,5 +1,6 @@
 -- i see u bean :eyes:
 -- bean, checking the playergui for any new guis and changing the path to the sounds wont work, lmao
+-- worst enemy is syn.protect_gui 😱😱
 -- let me know if i missed any words, or have any duplicates. you can either tell me in the discord or make an issue ticket that has the necessary info
 local wordlist = {
     ["rbxassetid://119699946181489"] = "dolphin",
