@@ -350,9 +350,22 @@ local wordlist = {
 local lastsound = nil 
 local lastword = "None"
 
+local keycodemap = {
+    ["a"] = 0x41, ["b"] = 0x42, ["c"] = 0x43, ["d"] = 0x44,
+    ["e"] = 0x45, ["f"] = 0x46, ["g"] = 0x47, ["h"] = 0x48,
+    ["i"] = 0x49, ["j"] = 0x4A, ["k"] = 0x4B, ["l"] = 0x4C,
+    ["m"] = 0x4D, ["n"] = 0x4E, ["o"] = 0x4F, ["p"] = 0x50,
+    ["q"] = 0x51, ["r"] = 0x52, ["s"] = 0x53, ["t"] = 0x54,
+    ["u"] = 0x55, ["v"] = 0x56, ["w"] = 0x57, ["x"] = 0x58,
+    ["y"] = 0x59, ["z"] = 0x5A, ["enter"] = 0x0D,
+}
+
+local autotypeenabled = false
+
 local ScreenGui = Instance.new("ScreenGui")
 local currentword = Instance.new("TextLabel")
 local copybutton = Instance.new("TextButton")
+local autotypetoggle = Instance.new("TextButton")
 
 ScreenGui.Parent = game.CoreGui
 currentword.Parent = ScreenGui
@@ -364,7 +377,7 @@ currentword.TextSize = 40
 currentword.TextColor3 = Color3.fromRGB(255, 255, 255)
 currentword.TextStrokeTransparency = 0
 currentword.TextStrokeColor3 = Color3.fromRGB(0, 0, 0)
-currentword.Text = lastword
+currentword.Text = "None"
 
 copybutton.Parent = ScreenGui
 copybutton.Size = UDim2.new(0.05, 0, 0.05, 0)
@@ -375,20 +388,55 @@ copybutton.TextSize = 20
 copybutton.TextColor3 = Color3.fromRGB(255, 255, 255)
 copybutton.Text = "Copy Word"
 
+autotypetoggle.Parent = ScreenGui
+autotypetoggle.Size = UDim2.new(0.05, 0, 0.05, 0)
+autotypetoggle.Position = UDim2.new(0.7, 0, 0.75, 0)
+autotypetoggle.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
+autotypetoggle.Font = Enum.Font.SourceSansBold
+autotypetoggle.TextSize = 20
+autotypetoggle.TextColor3 = Color3.fromRGB(255, 255, 255)
+autotypetoggle.Text = "Auto Type: Off"
 
-local function copyword()
-    setclipboard(lastword)
+copybutton.MouseButton1Click:Connect(function()
+    setclipboard(currentword.Text)
     copybutton.Text = "Copied!"
     task.delay(1, function()
         copybutton.Text = "Copy Word"
     end)
+end)
+
+local function presskey(key)
+    local keycode = keycodemap[key:lower()]
+    if not keycode then return end
+    keypress(keycode)
+    task.wait(0.05)
+    keyrelease(keycode)
 end
 
-copybutton.MouseButton1Click:Connect(copyword)
+local function autotypeword(word)
+    for letter in word:gmatch(".") do
+        presskey(letter)
+        task.wait(0.05)
+    end
+    presskey("enter")
+end
+
+local function toggleautotype()
+    autotypeenabled = not autotypeenabled
+    autotypetoggle.Text = "Auto Type: " .. (autotypeenabled and "On" or "Off")
+end
+
+autotypetoggle.MouseButton1Click:Connect(toggleautotype)
 
 local function updatecurrentword(word)
     currentword.Text = word
-    lastword = word
+    if autotypeenabled then
+        task.delay(1.75, function()
+            if currentword.Text == word then
+                autotypeword(word)
+            end
+        end)
+    end
 end
 
 local function checksound()
