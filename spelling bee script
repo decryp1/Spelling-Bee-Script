@@ -369,7 +369,7 @@ local function updatecurrentword(word)
 end
 
 local function checksound()
-    local sound = workspace.Temporary:FindFirstChild("Sound")
+    local sound = workspace.Temporary.Speaker:FindFirstChild("Sound")
     if sound and sound:IsA("Sound") then
         local soundId = tostring(sound.SoundId)
         if wordlist[soundId] and soundId ~= lastsound then
