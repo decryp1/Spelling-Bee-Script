@@ -1,6 +1,6 @@
 -- i see u bean :eyes:
 -- bean, checking the playergui for any new guis and changing the path to the sounds wont work, lmao
--- worst enemy is syn.protect_gui 😱😱
+-- also bean, changing the name of the folder the sound is held in will NOT work 😭🙏
 -- let me know if i missed any words, or have any duplicates. you can either tell me in the discord or make an issue ticket that has the necessary info
 local wordlist = {
     ["rbxassetid://119699946181489"] = "dolphin",
@@ -409,14 +409,14 @@ local function presskey(key)
     local keycode = keycodemap[key:lower()]
     if not keycode then return end
     keypress(keycode)
-    task.wait(0.05)
+    task.wait(0.01)
     keyrelease(keycode)
 end
 
 local function autotypeword(word)
     for letter in word:gmatch(".") do
         presskey(letter)
-        task.wait(0.05)
+        task.wait(0.02)
     end
     presskey("enter")
 end
@@ -440,13 +440,21 @@ local function updatecurrentword(word)
 end
 
 local function checksound()
-    local sound = workspace.Temporary.Speaker:FindFirstChild("Sound")
-    if sound and sound:IsA("Sound") then
-        local soundId = tostring(sound.SoundId)
-        if wordlist[soundId] and soundId ~= lastsound then
-            lastsound = soundId
-            local word = wordlist[soundId]
-            updatecurrentword(word)
+    local temp = workspace:FindFirstChild("Temporary")
+    if temp and temp:IsA("Folder") then
+        for _, child in ipairs(temp:GetChildren()) do
+            if child:IsA("Folder") then
+                local sound = child:FindFirstChild("Sound")
+                if sound and sound:IsA("Sound") then
+                    local soundId = tostring(sound.SoundId)
+                    if wordlist[soundId] and soundId ~= lastsound then
+                        lastsound = soundId
+                        local word = wordlist[soundId]
+                        updatecurrentword(word)
+                        break
+                    end
+                end
+            end
         end
     end
 end
