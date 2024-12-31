@@ -1,6 +1,7 @@
 -- bean, i might js obfuscate this script atp, ur actually so annoying 😭😭
 -- anyways, i'll tell you how i did it while i work on some more bypasses
 -- let me know if i missed any words, or have any duplicates. you can either tell me in the discord or make an issue ticket that has the necessary info
+-- (thanks for making sound logging easier, these 8 extra sounds every round makes it sm faster ♥♥♥)
 local wordlist = {
     ["rbxassetid://119699946181489"] = "dolphin",
     ["rbxassetid://17620333788"] = "thesis",
