@@ -1,6 +1,5 @@
--- i see u bean :eyes:
--- bean, checking the playergui for any new guis and changing the path to the sounds wont work, lmao
--- also bean, changing the name of the folder the sound is held in will NOT work 😭🙏
+-- bean, i might js obfuscate this script atp, ur actually so annoying 😭😭
+-- anyways, i'll tell you how i did it while i work on another bypass
 -- let me know if i missed any words, or have any duplicates. you can either tell me in the discord or make an issue ticket that has the necessary info
 local wordlist = {
     ["rbxassetid://119699946181489"] = "dolphin",
@@ -440,15 +439,14 @@ local function updatecurrentword(word)
 end
 
 local function checksound()
-    local temp = workspace:FindFirstChild("Temporary")
-    if temp and temp:IsA("Folder") then
-        for _, child in ipairs(temp:GetChildren()) do
-            if child:IsA("Folder") then
-                local sound = child:FindFirstChild("Sound")
-                if sound and sound:IsA("Sound") then
-                    local soundId = tostring(sound.SoundId)
+    local SS = game:GetService("SoundService") -- here im declaring the soundservice path
+    for _, part in ipairs(SS:GetChildren()) do -- anything in soundservice, check it
+        if part:IsA("Folder") or part:IsA("Model") or part:IsA("Part") then -- if its a part,
+            for _, child in ipairs(part:GetChildren()) do -- check inside that part for any sounds,
+                if child:IsA("Sound") and child.TimePosition > 0 then -- see here, you left the TimePosition of every fake sound as 0, so just check for any sound with a timescale above 0, and thats the real sound.
+                    local soundId = tostring(child.SoundId) -- you get the rest
                     if wordlist[soundId] and soundId ~= lastsound then
-                        lastsound = soundId
+                        lastsound = soundId -- there are some other methods to bypassing your little shenanigans, but i wont publish those until i feel the need for obfuscation, just to make it harder for u <3
                         local word = wordlist[soundId]
                         updatecurrentword(word)
                         break
