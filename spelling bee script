@@ -562,9 +562,9 @@ Tab:CreateSlider({
     end,
 })
 
-local fontsTab = Window:CreateTab("Fonts")
+local fonts = Window:CreateTab("Fonts")
 
-fontsTab:CreateButton({
+fonts:CreateButton({
     Name = "Comic Neue Angular",
     Callback = function()
         local args = {
@@ -576,7 +576,7 @@ game:GetService("ReplicatedStorage"):WaitForChild("EquipTypeFont"):FireServer(un
     end,
 })
 
-fontsTab:CreateButton({
+fonts:CreateButton({
     Name = "Source Sans Pro",
     Callback = function()
         local args = {
@@ -588,7 +588,7 @@ game:GetService("ReplicatedStorage"):WaitForChild("EquipTypeFont"):FireServer(un
     end,
 })
 
-fontsTab:CreateButton({
+fonts:CreateButton({
     Name = "Patrick Hand",
     Callback = function()
         local args = {
@@ -600,7 +600,7 @@ game:GetService("ReplicatedStorage"):WaitForChild("EquipTypeFont"):FireServer(un
     end,
 })
 
-fontsTab:CreateButton({
+fonts:CreateButton({
     Name = "Fondamento",
     Callback = function()
         local args = {
@@ -612,7 +612,7 @@ game:GetService("ReplicatedStorage"):WaitForChild("EquipTypeFont"):FireServer(un
     end,
 })
 
-fontsTab:CreateButton({
+fonts:CreateButton({
     Name = "Kalam",
     Callback = function()
         local args = {
@@ -624,7 +624,7 @@ game:GetService("ReplicatedStorage"):WaitForChild("EquipTypeFont"):FireServer(un
     end,
 })
 
-fontsTab:CreateButton({
+fonts:CreateButton({
     Name = "Creepster",
     Callback = function()
         local args = {
@@ -636,7 +636,7 @@ game:GetService("ReplicatedStorage"):WaitForChild("EquipTypeFont"):FireServer(un
     end,
 })
 
-fontsTab:CreateButton({
+fonts:CreateButton({
     Name = "Grenze Gotisch",
     Callback = function()
         local args = {
@@ -648,7 +648,7 @@ game:GetService("ReplicatedStorage"):WaitForChild("EquipTypeFont"):FireServer(un
     end,
 })
 
-fontsTab:CreateButton({
+fonts:CreateButton({
     Name = "Roman Antique",
     Callback = function()
         local args = {
@@ -660,7 +660,7 @@ game:GetService("ReplicatedStorage"):WaitForChild("EquipTypeFont"):FireServer(un
     end,
 })
 
-fontsTab:CreateButton({
+fonts:CreateButton({
     Name = "Amatic SC",
     Callback = function()
         local args = {
@@ -672,7 +672,7 @@ game:GetService("ReplicatedStorage"):WaitForChild("EquipTypeFont"):FireServer(un
     end,
 })
 
-fontsTab:CreateButton({
+fonts:CreateButton({
     Name = "Merriweather",
     Callback = function()
         local args = {
@@ -684,7 +684,7 @@ game:GetService("ReplicatedStorage"):WaitForChild("EquipTypeFont"):FireServer(un
     end,
 })
 
-fontsTab:CreateButton({
+fonts:CreateButton({
     Name = "Special Elite",
     Callback = function()
         local args = {
@@ -696,7 +696,7 @@ game:GetService("ReplicatedStorage"):WaitForChild("EquipTypeFont"):FireServer(un
     end,
 })
 
-fontsTab:CreateButton({
+fonts:CreateButton({
     Name = "Permanent Marker",
     Callback = function()
         local args = {
@@ -708,7 +708,7 @@ game:GetService("ReplicatedStorage"):WaitForChild("EquipTypeFont"):FireServer(un
     end,
 })
 
-fontsTab:CreateButton({
+fonts:CreateButton({
     Name = "Fredoka One",
     Callback = function()
         local args = {
@@ -720,7 +720,7 @@ game:GetService("ReplicatedStorage"):WaitForChild("EquipTypeFont"):FireServer(un
     end,
 })
 
-fontsTab:CreateButton({
+fonts:CreateButton({
     Name = "Luckiest Guy",
     Callback = function()
         local args = {
@@ -732,7 +732,7 @@ game:GetService("ReplicatedStorage"):WaitForChild("EquipTypeFont"):FireServer(un
     end,
 })
 
-fontsTab:CreateButton({
+fonts:CreateButton({
     Name = "Bangers",
     Callback = function()
         local args = {
@@ -744,7 +744,7 @@ game:GetService("ReplicatedStorage"):WaitForChild("EquipTypeFont"):FireServer(un
     end,
 })
 
-fontsTab:CreateButton({
+fonts:CreateButton({
     Name = "Indie Flower",
     Callback = function()
         local args = {
@@ -756,7 +756,7 @@ game:GetService("ReplicatedStorage"):WaitForChild("EquipTypeFont"):FireServer(un
     end,
 })
 
-fontsTab:CreateButton({
+fonts:CreateButton({
     Name = "Denk One",
     Callback = function()
         local args = {
@@ -768,7 +768,7 @@ game:GetService("ReplicatedStorage"):WaitForChild("EquipTypeFont"):FireServer(un
     end,
 })
 
-fontsTab:CreateButton({
+fonts:CreateButton({
     Name = "Press Start 2P",
     Callback = function()
         local args = {
