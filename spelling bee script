@@ -485,6 +485,7 @@ local Window = Rayfield:CreateWindow({
 })
 
 local Tab = Window:CreateTab("Main")
+local LLabel = Tab:CreateLabel("you will have to add your own words, im not doing allat")
 local Label = Tab:CreateLabel("Current Word: None")
 
 local function updatecurrentword(word)
@@ -503,7 +504,7 @@ end
 local function checksound()
     local function fsic(container)
         for _, descendant in ipairs(container:GetDescendants()) do
-            if descendant:IsA("Sound") and descendant.Playing and descendant.Volume == 2.5 and descendant.PlaybackLoudness > 0 then
+            if descendant:IsA("Sound") and descendant.Playing then
                 local soundId = tostring(descendant.SoundId)
                 if wordlist[soundId] and soundId ~= lastsound then
                     lastsound = soundId
@@ -515,8 +516,9 @@ local function checksound()
         end
     end
 
-    fsic(workspace)
-    fsic(game:GetService("SoundService"))
+    for _, container in pairs(game:GetChildren()) do
+        fsic(container)
+    end
 end
 
 Tab:CreateButton({
@@ -780,8 +782,7 @@ game:GetService("ReplicatedStorage"):WaitForChild("EquipTypeFont"):FireServer(un
     end,
 })
 
-game:GetService("RunService").Stepped:Connect(function()
-    pcall(function()
-        checksound()
-    end)
-end)
+while true do
+task.wait(0.1)
+checksound()
+end
