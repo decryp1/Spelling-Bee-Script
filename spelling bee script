@@ -1,5 +1,5 @@
--- bean istg ur js sitting here refreshing the page, hop off my github brah 🙏
--- let me know if i missed any words, or have any duplicates. you can either tell me in the discord or make an issue ticket that has the necessary info
+-- please give me a better word list if you have one, i will 100% put it in this script if its better.
+-- updated as of February 28th, 2025
 
 local Rayfield = loadstring(game:HttpGet("https://sirius.menu/rayfield"))()
 local wordlist = {
