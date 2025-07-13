@@ -9,7 +9,7 @@ local keycodemap = {
 }
 
 local typokeys = { -- maps keys closest to each letter, so the auto typo can choose a random key for each letter that seems realistic for a typo. like for A, S is the first because S is closest to A
-    a = {"s", "q", "w", "z"},
+    a = {"s", "q", "w", "z"}, -- ts is also why herkle hub is better than preppy hub 😍😍😍
     b = {"v", "g", "h", "n"},
     c = {"x", "d", "f", "v"},
     d = {"s", "e", "r", "f", "c", "x"},
