@@ -1,1 +1,38 @@
+local keycodemap = {
+    ["a"] = 0x41, ["b"] = 0x42, ["c"] = 0x43, ["d"] = 0x44,
+    ["e"] = 0x45, ["f"] = 0x46, ["g"] = 0x47, ["h"] = 0x48,
+    ["i"] = 0x49, ["j"] = 0x4A, ["k"] = 0x4B, ["l"] = 0x4C,
+    ["m"] = 0x4D, ["n"] = 0x4E, ["o"] = 0x4F, ["p"] = 0x50,
+    ["q"] = 0x51, ["r"] = 0x52, ["s"] = 0x53, ["t"] = 0x54,
+    ["u"] = 0x55, ["v"] = 0x56, ["w"] = 0x57, ["x"] = 0x58,
+    ["y"] = 0x59, ["z"] = 0x5A, ["backspace"] = 0x08, ["enter"] = 0x0D,
+}
 
+local typokeys = {
+    a = {"s", "q", "w", "z"},
+    b = {"v", "g", "h", "n"},
+    c = {"x", "d", "f", "v"},
+    d = {"s", "e", "r", "f", "c", "x"},
+    e = {"w", "s", "d", "r"},
+    f = {"d", "r", "t", "g", "v", "c"},
+    g = {"f", "t", "y", "h", "b", "v"},
+    h = {"g", "y", "u", "j", "n", "b"},
+    i = {"u", "j", "k", "o"},
+    j = {"h", "u", "i", "k", "m", "n"},
+    k = {"j", "i", "o", "l", "m"},
+    l = {"k", "o", "p"},
+    m = {"n", "j", "k"}, -- let me know if i should add different letters for this list, like spacebar or numbers for the typo, yk
+    n = {"b", "h", "j", "m"},
+    o = {"i", "k", "l", "p"},
+    p = {"o", "l"},
+    q = {"w", "a"},
+    r = {"e", "d", "f", "t"},
+    s = {"a", "w", "e", "d", "x", "z"},
+    t = {"r", "f", "g", "y"},
+    u = {"y", "h", "j", "i"},
+    v = {"c", "f", "g", "b"},
+    w = {"q", "a", "s", "e"},
+    x = {"z", "s", "d", "c"},
+    y = {"t", "g", "h", "u"},
+    z = {"a", "s", "x"}
+}
