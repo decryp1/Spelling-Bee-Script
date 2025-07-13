@@ -8,7 +8,7 @@ local keycodemap = {
     ["y"] = 0x59, ["z"] = 0x5A, ["backspace"] = 0x08, ["enter"] = 0x0D,
 }
 
-local typokeys = { -- maps keys closest to each letter, so the auto typo can choose a random key for each letter that seems realistic for a typo like for A, S is the first because S is closest to A
+local typokeys = { -- maps keys closest to each letter, so the auto typo can choose a random key for each letter that seems realistic for a typo. like for A, S is the first because S is closest to A
     a = {"s", "q", "w", "z"},
     b = {"v", "g", "h", "n"},
     c = {"x", "d", "f", "v"},
