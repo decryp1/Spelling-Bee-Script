@@ -35,4 +35,4 @@ local typokeys = { -- maps keys closest to each letter, so the auto typo can cho
     x = {"z", "s", "d", "c"},
     y = {"t", "g", "h", "u"},
     z = {"a", "s", "x"}
-}
+} -- the auto typo checks this table any time the next word is supposed to be a typo, and it checks what the typo letter is, then finds a random value corresponding to that letter, then presses it as a typo.
