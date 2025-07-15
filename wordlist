@@ -652,5 +652,7 @@ local wordlist = {
     ["rbxassetid://104141008242079"] =      "vignette",
     ["rbxassetid://118825971952664"] =      "semaphore",
     ["rbxassetid://114793812699768"] =      "pugnacious",
-    ["rbxassetid://124289311865619"] =      "abasia"
+    ["rbxassetid://124289311865619"] =      "abasia",
+    ["rbxassetid://133831557421362"] =      "wholeheartedly",
+    ["rbxassetid://106289257367197"] =      "detrimental",
 }
