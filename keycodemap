@@ -35,4 +35,4 @@ local typokeys = { -- maps keys closest to each letter, so the auto typo can cho
     x = {"z", "s", "d", "c"},
     y = {"t", "g", "h", "u"},
     z = {"a", "s", "x"}
-} -- the auto typo checks this table any time the next letter is supposed to be a typo, and it checks what the typo letter is, then finds a random value corresponding to that letter, then presses it as a typo.
+} -- the auto typo checks this table any time the next letter is supposed to be a typo, and it checks what the typo letter is, then looks through the keycodes surrounding that letter for a random key. (math.random(1, 7) if it returns 4, it checks for the fourth key in the corresponding letters table, then presses that key, then presses it as a typo.
