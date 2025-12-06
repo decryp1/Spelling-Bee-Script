@@ -11,11 +11,15 @@ Herkle Hub is the BEST script for Spelling Bee by Bean's Can. This script has ov
 
 # Feature Explanation
 #1 "Copy Current Word"
+
   > sets the current word to your clipboard
 
 #2 "Say Current Word"
+
   > says the current word in the chat
+
   > "Auto Say Word" automates this feature!
+
   > "Say Word Delay" changes how long the script waits before saying the current word
 
 #3 "Auto Type" (i wont add sliders since some are already covered here, and most are just a given (also features will be "counted" based on whether or not it's a SOLE feature))
