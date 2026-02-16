@@ -2,7 +2,7 @@
 Herkle Hub was the very first Spelling Bee script. It started out rough, with only a label that showed you the current word, a copy word button and an auto type. Upon the realization that other scripts were in development, I decided to rewrite it. The first rewrite ended with Herkle Hub being barely the best Spelling Bee script, with a few holes here and there. Only one other script had ever topped Herkle Hub, and that was when I stopped updating the script. After a few months of not updating Herkle Hub and scripts like Preppy Hub maintaining updates, I decided to do a full rewrite of Herkle Hub for Spelling Bee, which is the current version below. At the time of writing this, Herkle Hub has ZERO competition and is undeniably the BEST Spelling Bee script.
 
 ## CURRENT STATE OF HERKLE HUB FOR SPELLING BEE + SHOWCASE
-Herkle Hub is the BEST script for Spelling Bee by Bean's Can. This script has over 50 features, all which work in unison with eachother to increase stability. Herkle Hub is the most precise, clean, and performant Spelling Bee script. Herkle Hub stands out with features like Auto Typo, Always Correct Letter, a built in word-logger that auto fills the word in the ui to make adding words even easier, and an Emote Player that includes all paid emotes and even the unreleased ones, ALL FOR FREE! Everything found in Herkle Hub for Spelling Bee is not only the first of its kind, but it also the BEST version of said feature! Herkle Hub does it best, and that's guaranteed. 
+Herkle Hub is the BEST script for Spelling Bee by Bean's Can. This script has over 50 features, all which work in unison with each other to increase stability. Herkle Hub is the most precise, clean, and performant Spelling Bee script. Herkle Hub stands out with features like Auto Typo, Always Correct Letter, a built-in word-logger that auto fills the word in the ui to make adding words even easier, and an Emote Player that includes all paid emotes and even the unreleased ones, ALL FOR FREE! Everything found in Herkle Hub for Spelling Bee is not only the first of its kind, but it also the BEST version of said feature! Herkle Hub does it best, and that's guaranteed. 
 <img width="728" height="608" alt="image" src="https://github.com/user-attachments/assets/123d8ae1-2e52-478a-b211-062a77d290f4" />
 <img width="725" height="999" alt="image" src="https://github.com/user-attachments/assets/923de645-0c2b-40f9-b31b-5a9278db4613" />
 <img width="761" height="660" alt="image" src="https://github.com/user-attachments/assets/26d85b36-fe84-423f-815d-1c48cc24d9ab" />
@@ -23,7 +23,7 @@ Herkle Hub is the BEST script for Spelling Bee by Bean's Can. This script has ov
   
   > "Typing Method" changes the method the script will use to enter a key
     > "Keypress" tells the script to use the "keypress(<keycode>)" function in your executors environment
-    > "Remote" tells the script to fire the games remotes to register a keypress, rather than pressing keys. this reduces interference with chats and such.
+    > "Remote" tells the script to fire the game's remotes to register a keypress, rather than pressing keys. this reduces interference with chats and such.
     > "VIM" does NOT use VirtualInputManager, the name is misleading. this method tells the script to, instead, edit the box where the word is entered to trick the game
     
   > "Typing Mode" changes the waiting method the script will use between keypresses
