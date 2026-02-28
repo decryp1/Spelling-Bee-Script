@@ -1,1 +1,19 @@
--- wordlist but solely for words that have different / shorter versions
+-- wordlist but for words that can be spelled shorter
+local shortwordlist = {
+    ["rbxassetid://136242033338684"] =      "be", -- "bee"
+    ["rbxassetid://129568424936057"] =      "pi", -- "pie"
+    ["rbxassetid://120763306045362"] =      "flour", -- "flower"
+    ["rbxassetid://98239573833470"]  =      "farrow", -- "pharaoh"
+    ["rbxassetid://17627821778"]     =      "kernel", -- "colonel"
+    ["rbxassetid://81185679964457"]  =      "nocturn", -- "nocturne"
+    ["rbxassetid://17620542202"]     =      "endeavor", -- "endeavour"
+    ["rbxassetid://18257236422"]     =      "favorable", -- "favourable"
+    ["rbxassetid://107321554203993"] =      "homeopathy", -- "homoeopathy"
+    ["rbxassetid://81079094301922"]  =      "hemoglobin", -- "haemoglobin"
+    ["rbxassetid://17707373034"]     =      "neighboring", -- "neighbouring"
+    ["rbxassetid://99528494242500"]  =      "adrenocorticotropin", -- "adrenocorticotrophin"
+    ["rbxassetid://87247321856093"]  =      "honorificabilitudinity", -- "honourificabilitudinity"
+    ["rbxassetid://122567552808354"] =      "hematospectrophotometrically", -- "haematospectrophotometrically"
+    ["rbxassetid://73465606584074"]  =      "hippopotomonstrosesquipedaliophobia", -- "hippopotomonstrosesquippedaliophobia"
+}
+return shortwordlist
