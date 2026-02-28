@@ -2,6 +2,7 @@
 local shortwordlist = {
     ["rbxassetid://136242033338684"] =      "be", -- "bee"
     ["rbxassetid://129568424936057"] =      "pi", -- "pie"
+    ["rbxassetid://90237648171303"] =       "slay", -- "sleigh"
     ["rbxassetid://120763306045362"] =      "flour", -- "flower"
     ["rbxassetid://98239573833470"]  =      "farrow", -- "pharaoh"
     ["rbxassetid://17627821778"]     =      "kernel", -- "colonel"
