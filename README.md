@@ -22,7 +22,7 @@ Herkle Hub is the BEST script for Spelling Bee by Bean's Can. This script has ov
 <summary><b>#2 — Say Current Word</b></summary>
 
 - says the current word in the chat
-- `Auto Say Word` automates this feature!
+- `Auto Say Word` (found near `Say Current Word`) automates this feature!
 - `Say Word Delay` changes how long the script waits before saying the current word
 
 </details>
