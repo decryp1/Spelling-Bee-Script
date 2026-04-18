@@ -23,16 +23,17 @@ Herkle Hub is the BEST script for Spelling Bee by Bean's Can. This script has ov
   
   > "Typing Method" changes the method the script will use to enter a key
     > "Keypress" tells the script to use the "keypress(<keycode>)" function in your executors environment
-    > "Remote" tells the script to fire the game's remotes to register a keypress, rather than pressing keys. this reduces interference with chats and such.
+    > "Remote" tells the script to fire the game's remotes to register a keypress, rather than pressing keys. this reduces interference with chats et al.
     > "VIM" does NOT use VirtualInputManager, the name is misleading. this method tells the script to, instead, edit the box where the word is entered to trick the game
     
   > "Typing Mode" changes the waiting method the script will use between keypresses
     > "Static" tells the script to wait for as long as the user tells it to, no later, no less, before and betwixt each keypress
-    > "Random" tells the script to choose between a min and max value, and wait for that duration
+    > "Random" tells the script to choose between a min and max value, and wait for a random time within that duration
+    >> e.g., min wait time is 0.06, max is 0.2. the script runs math.random(0.06, 0.2), and chooses a value like 0.12
     
   > "Typing Speed Range"
     > only visible when the "Random" typing mode is chosen
-    > turns two sliders on: "Custom Min Speed" and "Custom Max Speed". these sliders let the script use the "math.random(<1>, <2>)" function to choose a random integer between the two values, and wait for that duration before each keypress
+    > turns two sliders on: "Custom Min Speed" and "Custom Max Speed". these sliders let the script use the "math.random(<min>, <max>)" function to choose a random integer between the two values, and wait for that duration before each keypress
 
   > "Random Pretype Delay"
     > instead of waiting for a constant value every time, it chooses a value from the two sliders that show upon the state changing, and waits for that duration before typing a word
@@ -45,9 +46,11 @@ Herkle Hub is the BEST script for Spelling Bee by Bean's Can. This script has ov
 
 #4 "Auto Typo" (sliders will be added here since it just seems right)
   > tells the auto type to incorporate minor spelling errors (typos) into the spelling of a given word, based on the chosen settings
+  > this increases the human aspect of the auto type, but is not guarenteed to nullify bans. it's not a human.
 
   > "No Early Typos"
-    > tells the script to wait until a certain amount of letters have been typed before typo-ing
+    > tells the script to wait until a certain amount of letters have been typed before typo-ing 
+    > if the word is "definitely", the script will only allow typos after the letter "n", and no earlier.
 
   > "Typo Method"
     > "Correct Letter + Typo"
@@ -61,32 +64,35 @@ Herkle Hub is the BEST script for Spelling Bee by Bean's Can. This script has ov
 
   > "Typo Chance"
     > the chance that is weighed before each keypress to determine if it should be a typo or not
+    > (like flipping a coin with odds that YOU choose with sliders, rather than 50/50)
 
   > "Typo Backspace Delay"
-    > the delay after adding a typo that the script will wait before reversing the typo
+    > the delay after adding a typo that the script will wait before omitting the typo
 
   > "Typo Resume Delay"
-    > 67
-    > the time the script waits before pressing the next key after a typo
+    > after inserting and omitting a typo, this slider determines how long to wait before typing the next letter
 
   > "Continue After Typo"
-    > instead of instantly reversing the typo, if this toggle is on, the script will press a few more keys before reversing the typo. keys pressed during this fugue state will never be typos, only correct ones
-
+    > instead of instantly reversing the typo, if this toggle is on, the script will press a few more keys before reversing the typo. keys pressed during this state will never be typos, only correct ones
+    
   > "Max Letters After Typo"
     > the max letters that will be pressed for a word after a typo
     > only works if the toggle above is turned on
 
   > "Delete Full Word"
-    > instead of backspacing over a set amount of keys, if this toggle is on, the entire word will be deleted and restarted, to make u seem like a pro
+    > instead of backspacing over a set amount of characters, if this toggle is on, the entire word will be deleted and restarted to make u seem like a pro
 
   > "Delete Full Word Chance"
     > chance that gets weighed upon the backspacing of a typo to determine whether or not it will be fully deleted
+    > (future feature??: shorter words have a higher chance of being fully deleted to simulate the decision-making of a human??)
 
   > "Lose After X Words"
     > tells the script to PURPOSEFULLY lose after a certain amount of words have been typed
+    > (future feature??: lose after a certain streak is obtained/maintained for a while?)
 
   > "Max Words Before Lose"
     > max words that must be typed before the script loses for you
+    >> (maybe "max streak before lose" too?)
 
   > "Lose Method"
     > the method the script will use to lose for you
@@ -105,6 +111,7 @@ Herkle Hub is the BEST script for Spelling Bee by Bean's Can. This script has ov
 
 #6 "Free Emotes"
   > lets you play any emote, even unreleased ones, for free. you can also change the speed of the emotes with HHUB
+  > pssttt, unreleased emotes are js emotes i got from infinite yield
 
 #7 "Auto Click Ducks"
   > automatically clicks ducks for you when a duck is detected
