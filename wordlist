@@ -1,7 +1,5 @@
--- open source because i feel bad for the video being misleading
--- just create an issue ticket for this repo and add the words and the soundid into it and i'll merge the changes
 -- lmk if there are any duped soundids or words and i'll try to fix them
--- also use my script to find the soundid's and check them correctly
+-- use my script to find the soundid's and check them correctly
 local wordlist = {
     ["rbxassetid://119699946181489"] =      "dolphin",
     ["rbxassetid://17620333788"]     =      "thesis",
