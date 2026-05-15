@@ -696,6 +696,7 @@ local wordlist = {
     ["rbxassetid://133369289865739"] =      "consummate",
     ["rbxassetid://123394107835425"] =      "polychromatic",
     ["rbxassetid://129389751987838"] =      "sanguine",
+    ["rbxassetid://80457009734884"] =       "sanguine",
     ["rbxassetid://95480328469111"]  =      "diminution",
     ["rbxassetid://79905015855519"]  =      "epitome",
     ["rbxassetid://75824341716939"]  =      "insinuate",
