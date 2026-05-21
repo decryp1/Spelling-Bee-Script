@@ -1,6 +1,5 @@
 ## CURRENT STATE OF HERKLE HUB FOR SPELLING BEE + SHOWCASE
 Herkle Hub is the BEST script for Spelling Bee by Bean's Can. This script has over 50 features, all which work in unison with each other to increase stability. Herkle Hub is the most precise, clean, and performant Spelling Bee script. Herkle Hub stands out with features like Auto Typo, Always Correct Letter, a built-in word-logger that auto fills the word in the ui to make adding words even easier, and an Emote Player that includes all paid emotes and even the unreleased ones, ALL FOR FREE! Everything found in Herkle Hub for Spelling Bee is not only the first of its kind, but it also the BEST version of said feature! Herkle Hub does it best, and that's guaranteed.
-
 Home tab (greeting, stats, utility)
 <img width="728" height="608" alt="image" src="https://github.com/user-attachments/assets/123d8ae1-2e52-478a-b211-062a77d290f4" />
 
